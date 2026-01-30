@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+/* Modern 2-color scheme: Dark Slate Blue and Light Blue */
+:root {
+  --primary: #1e293b; /* Dark slate blue */
+  --secondary: #e0f2fe; /* Light blue */
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --background: #ffffff;
+  --accent: #3b82f6; /* Blue accent for highlights */
+}
+
+@theme inline {
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-background: var(--background);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-accent: var(--accent);
+}
+
+body {
+  background: var(--secondary);
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding-bottom: 120px;
+}
+
+a {
+  color: var(--accent);
+}
+
+main {
+  @apply min-h-screen;
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-6 py-12;
+  }
+  
+  .btn {
+    @apply rounded-lg font-semibold text-white bg-cyan-950 cursor-pointer disabled:pointer-events-none;
+  }
+
+  .pill {
+    @apply inline-block px-4 py-1.5 text-xs font-bold rounded-full bg-cyan-950 text-white;
+  }
+}
