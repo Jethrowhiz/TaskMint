@@ -1,5 +1,7 @@
 'use client';
 
+import { Link } from 'react-router-dom';
+
 import { useWallet } from './context/AppContext';
 import ConnectButton from './components/ConnectButton';
 
@@ -39,8 +41,8 @@ export default function App() {
           {isConnected && (
             <div className="space-y-8">
               <div className="flex flex-col sm:flex-row gap-6 justify-center max-w-lg mx-auto">
-                <a
-                  href="/create-bounty"
+                <Link
+                  to="/create-bounty"
                   className="text-center py-6 px-8 rounded-xl font-bold text-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                   style={{
                     backgroundColor: 'var(--primary)',
@@ -48,10 +50,10 @@ export default function App() {
                   }}
                 >
                   CREATE BOUNTY
-                </a>
+                </Link>
 
-                <a
-                  href="/bounties"
+                <Link
+                  to="/bounties"
                   className="text-center py-6 px-8 rounded-xl font-bold text-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl border-2"
                   style={{
                     backgroundColor: 'var(--secondary)',
@@ -60,7 +62,7 @@ export default function App() {
                   }}
                 >
                   BROWSE BOUNTIES
-                </a>
+                </Link>
               </div>
 
               {/* Quick Actions Guide */}
@@ -147,8 +149,8 @@ export default function App() {
                 className="text-sm font-medium"
                 style={{ color: 'var(--primary)' }}
               >
-                ✅ Secure escrow<br/>
-                ✅ Detailed descriptions<br/>
+                ✅ Secure escrow<br />
+                ✅ Detailed descriptions<br />
                 ✅ Instant deployment
               </div>
             </div>
@@ -182,8 +184,8 @@ export default function App() {
                 className="text-sm font-medium"
                 style={{ color: 'var(--primary)' }}
               >
-                🔍 Browse opportunities<br/>
-                📝 Submit deliverables<br/>
+                🔍 Browse opportunities<br />
+                📝 Submit deliverables<br />
                 🏆 Compete for rewards
               </div>
             </div>
@@ -217,8 +219,8 @@ export default function App() {
                 className="text-sm font-medium"
                 style={{ color: 'var(--primary)' }}
               >
-                ⚡ Instant payments<br/>
-                🔒 Smart contract security<br/>
+                ⚡ Instant payments<br />
+                🔒 Smart contract security<br />
                 📊 On-chain transparency
               </div>
             </div>
